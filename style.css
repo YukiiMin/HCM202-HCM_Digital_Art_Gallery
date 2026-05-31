@@ -283,7 +283,7 @@ p, img, div, canvas { vertical-align: top; }
 }
 
 /* ── ABOUT OVERLAY ───────────────────────────────────────────── */
-#about-overlay {
+#about-overlay, #author-overlay {
   position: fixed;
   inset: 0;
   background: rgba(10, 8, 5, 0.96);
@@ -294,11 +294,11 @@ p, img, div, canvas { vertical-align: top; }
   box-sizing: border-box;
   transform: translateY(-100%);
   transition: transform 0.45s var(--ease-heavy);
-  z-index: 500;
+  z-index: 2500;
   overflow-y: auto;
 }
 
-#about-overlay.show { transform: translateY(0); }
+#about-overlay.show, #author-overlay.show { transform: translateY(0); }
 
 .about-content {
   max-width: 720px;
@@ -400,7 +400,7 @@ p, img, div, canvas { vertical-align: top; }
   flex-shrink: 0;
 }
 
-#close-about {
+#close-about, #close-author {
   position: fixed;
   top: 28px;
   right: 28px;
@@ -416,11 +416,11 @@ p, img, div, canvas { vertical-align: top; }
   padding: 10px 20px;
   border-radius: 100px;
   cursor: pointer;
-  z-index: 501;
+  z-index: 2501;
   transition: all 0.2s ease;
 }
 
-#close-about:hover {
+#close-about:hover, #close-author:hover {
   color: var(--color-cream);
   border-color: rgba(255,255,255,0.25);
   background: rgba(40, 30, 15, 0.9);
@@ -933,9 +933,7 @@ canvas {
 }
 
 .landing-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: none !important;
 }
 
 .gold-star-logo {
@@ -1162,4 +1160,94 @@ canvas {
   margin: 0;
   min-height: 50px;
 }
+
+/* ============================================================
+   WEBSITE FLOATING LOGO (TOP-LEFT CORNER)
+   ============================================================ */
+#main-web-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+  user-select: none;
+  background: rgba(15, 11, 8, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 8px 18px 8px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s var(--ease-heavy);
+  text-decoration: none;
+  cursor: url('/images/cursor-flag.svg') 16 10, auto !important;
+}
+
+#main-web-logo:hover {
+  border-color: var(--color-gold);
+  background: rgba(20, 15, 10, 0.85);
+  box-shadow: 0 12px 40px rgba(201, 168, 76, 0.35);
+  transform: translateY(-2px);
+}
+
+.gold-lotus-logo {
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(0 2px 8px rgba(201, 168, 76, 0.45));
+  transition: transform 0.8s var(--ease-heavy);
+}
+
+#main-web-logo:hover .gold-lotus-logo {
+  transform: rotate(360deg) scale(1.08);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-main {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-cream);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.logo-sub {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-top: 1px;
+  opacity: 0.95;
+}
+
+/* Ẩn logo ở màn hình siêu nhỏ nếu quá chật chội, hoặc thu nhỏ kích cỡ */
+@media (max-width: 480px) {
+  #main-web-logo {
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px 6px 8px;
+    gap: 8px;
+  }
+  .gold-lotus-logo {
+    width: 28px;
+    height: 28px;
+  }
+  .logo-main {
+    font-size: 13px;
+  }
+  .logo-sub {
+    font-size: 7.5px;
+  }
+}
+
 

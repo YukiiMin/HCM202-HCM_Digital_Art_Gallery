@@ -279,15 +279,20 @@ function initSettingsModal() {
 
 function setupAuthorInfo() {
   const authorBtn = document.getElementById('btn_open_author');
-  if (authorBtn) {
-    authorBtn.addEventListener('click', () => {
-      alert(
-        'DỰ ÁN TRIỂN LÃM 3D: HỒ CHÍ MINH - TÂM HỒN & DI SẢN\n\n' +
-        '• Môn học: Lịch Sử Việt Nam (HCM202) — Đại học FPT TP.HCM\n' +
-        '• Thực hiện: Nhóm sinh viên lớp HCM202\n' +
-        '• Công nghệ: Web3D Three.js + Raycasting + Canvas Procedurals\n' +
-        '• Mục tiêu: Tái hiện sinh động di sản cách mạng, thơ ca báo chí chính luận của Bác cùng những khúc hùng ca vĩnh cửu đi vào lòng nhân dân thế giới.'
-      );
+  const authorOverlay = document.getElementById('author-overlay');
+  const closeAuthor = document.getElementById('close-author');
+
+  if (authorBtn && authorOverlay) {
+    authorBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      authorOverlay.classList.add('show');
+    });
+  }
+
+  if (closeAuthor && authorOverlay) {
+    closeAuthor.addEventListener('click', (e) => {
+      e.stopPropagation();
+      authorOverlay.classList.remove('show');
     });
   }
 }

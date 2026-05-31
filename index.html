@@ -18,9 +18,35 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15 C45 35 35 45 50 85 C65 45 55 35 50 15 Z' fill='%23C9A84C'/><path d='M50 45 C30 45 20 55 30 75 C45 65 48 55 50 45 Z' fill='%23C9A84C' opacity='0.9'/><path d='M50 45 C70 45 80 55 70 75 C55 65 52 55 50 45 Z' fill='%23C9A84C' opacity='0.9'/></svg>">
   </head>
 
   <body>
+    <!-- ============================================================ -->
+    <!-- WEBSITE LOGO — Góc trên cùng bên trái ngoài cùng             -->
+    <!-- ============================================================ -->
+    <div id="main-web-logo">
+      <svg viewBox="0 0 100 100" class="gold-lotus-logo">
+        <path d="M50 15 C45 35 35 45 50 85 C65 45 55 35 50 15 Z" fill="url(#gold-grad-header)"/>
+        <path d="M50 45 C30 45 20 55 30 75 C45 65 48 55 50 45 Z" fill="url(#gold-grad-header)" opacity="0.9"/>
+        <path d="M50 45 C70 45 80 55 70 75 C55 65 52 55 50 45 Z" fill="url(#gold-grad-header)" opacity="0.9"/>
+        <path d="M50 55 C15 55 10 65 20 80 C35 75 42 68 50 55 Z" fill="url(#gold-grad-header)" opacity="0.8"/>
+        <path d="M50 55 C85 55 90 65 80 80 C65 75 58 68 50 55 Z" fill="url(#gold-grad-header)" opacity="0.8"/>
+        <defs>
+          <linearGradient id="gold-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFE79A" />
+            <stop offset="50%" stop-color="#C9A84C" />
+            <stop offset="100%" stop-color="#8A6421" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-main">HCM GALLERY</span>
+        <span class="logo-sub">TÂM HỒN &amp; DI SẢN</span>
+      </div>
+    </div>
+
     <!-- ============================================================ -->
     <!-- INTRO SCREEN — Màn hình chào mừng                           -->
     <!-- ============================================================ -->
@@ -82,7 +108,7 @@
           </ul>
 
           <div class="landing-footer" style="padding-top: 15px; border-top: 1px solid rgba(201, 168, 76, 0.1); margin-top: 15px; text-align: left;">
-            <img src="/logo/Logo_Trường_Đại_học_FPT.svg.png" alt="Logo Đại học FPT" style="height: 35px; width: auto; opacity: 0.95; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/logo/Logo_Trường_Đại_học_FPT.svg.png" alt="Logo Đại học FPT" style="height: 52px; width: auto; opacity: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6)); transition: all 0.3s ease; cursor: pointer; image-rendering: -webkit-optimize-contrast;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
           </div>
         </div>
 
@@ -227,6 +253,48 @@
               <kbd>Esc</kbd><span>Thoát chế độ con trỏ chuột bị khóa</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- AUTHOR OVERLAY — Thông tin tác giả                          -->
+    <!-- ============================================================ -->
+    <div id="author-overlay">
+      <button id="close-author">✕ ĐÓNG</button>
+
+      <div class="about-content">
+        <div class="about-badge">THÔNG TIN TÁC GIẢ</div>
+        <h1>Hồ Chí Minh: Tâm Hồn &amp; Di Sản</h1>
+        <p class="about-lead" style="font-size: 16px; color: var(--color-gold); font-family: var(--font-serif); font-style: italic; margin-top: -10px; margin-bottom: 25px;">
+          Dự án Triển Lãm Thực Tế Ảo 3D học phần Lịch Sử Việt Nam (HCM202)
+        </p>
+
+        <div class="about-wings" style="background: rgba(201, 168, 76, 0.08); border-color: rgba(201, 168, 76, 0.35); padding: 28px;">
+          <h2 style="font-family: var(--font-serif); font-size: 22px; color: var(--color-cream); margin-top: 0; margin-bottom: 18px; border-bottom: 1px solid rgba(201, 168, 76, 0.2); padding-bottom: 10px;">
+            Ban Thực Hiện Dự Án
+          </h2>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(201, 168, 76, 0.1); padding-bottom: 8px;">
+              <span style="font-weight: 600; color: var(--color-cream); font-size: 15px;">Lớp học phần:</span>
+              <span style="color: var(--color-gold); font-weight: 500;">HCM202 — Đại học FPT TP.HCM</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(201, 168, 76, 0.1); padding-bottom: 8px;">
+              <span style="font-weight: 600; color: var(--color-cream); font-size: 15px;">Thực hiện bởi:</span>
+              <span style="color: var(--color-gold); font-weight: 500;">Nhóm Sinh Viên Lớp HCM202</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(201, 168, 76, 0.1); padding-bottom: 8px;">
+              <span style="font-weight: 600; color: var(--color-cream); font-size: 15px;">Công nghệ tích hợp:</span>
+              <span style="color: var(--color-gold); font-weight: 500; text-align: right;">Web3D Three.js + Raycasting + Canvas Procedurals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-controls" style="margin-top: 30px;">
+          <h2>Mục tiêu dự án</h2>
+          <p style="font-size: 14.5px; line-height: 1.8; color: rgba(240, 230, 211, 0.8);">
+            Dự án được xây dựng nhằm tái hiện sinh động di sản cách mạng vĩ đại, thơ ca tinh tế, cùng các tác phẩm chính luận đanh thép của Chủ tịch Hồ Chí Minh. Triển lãm đồng thời trưng bày những tác phẩm hội họa, âm nhạc bất hủ từ các nghệ sĩ Việt Nam và quốc tế lấy cảm hứng từ tấm lòng nhân ái bao la của Người, khắc sâu giá trị lịch sử và lòng yêu nước tự hào dân tộc.
+          </p>
         </div>
       </div>
     </div>
