@@ -270,22 +270,84 @@
           Dự án Triển Lãm Thực Tế Ảo 3D học phần Lịch Sử Việt Nam (HCM202)
         </p>
 
-        <div class="about-wings" style="background: rgba(201, 168, 76, 0.08); border-color: rgba(201, 168, 76, 0.35); padding: 28px;">
+        <!-- Ban Thực Hiện Dự Án & Thông tin lớp -->
+        <div class="about-wings" style="background: rgba(201, 168, 76, 0.08); border-color: rgba(201, 168, 76, 0.35); padding: 28px; margin-bottom: 25px;">
           <h2 style="font-family: var(--font-serif); font-size: 22px; color: var(--color-cream); margin-top: 0; margin-bottom: 18px; border-bottom: 1px solid rgba(201, 168, 76, 0.2); padding-bottom: 10px;">
             Ban Thực Hiện Dự Án
           </h2>
-          <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(201, 168, 76, 0.1); padding-bottom: 8px;">
               <span style="font-weight: 600; color: var(--color-cream); font-size: 15px;">Lớp học phần:</span>
               <span style="color: var(--color-gold); font-weight: 500;">HCM202 — Đại học FPT TP.HCM</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(201, 168, 76, 0.1); padding-bottom: 8px;">
-              <span style="font-weight: 600; color: var(--color-cream); font-size: 15px;">Thực hiện bởi:</span>
-              <span style="color: var(--color-gold); font-weight: 500;">Nhóm Sinh Viên Lớp HCM202</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(201, 168, 76, 0.1); padding-bottom: 8px;">
               <span style="font-weight: 600; color: var(--color-cream); font-size: 15px;">Công nghệ tích hợp:</span>
               <span style="color: var(--color-gold); font-weight: 500; text-align: right;">Web3D Three.js + Raycasting + Canvas Procedurals</span>
+            </div>
+          </div>
+
+          <!-- 2 Author cards -->
+          <div class="author-cards">
+            <div class="author-card">
+              <div class="author-role">Thành viên thực hiện</div>
+              <div class="author-name">Lê Công Vinh</div>
+              <div class="author-mssv">MSSV: <span style="color: var(--color-gold); font-weight: 600;">SE184764</span></div>
+            </div>
+            <div class="author-card">
+              <div class="author-role">Thành viên thực hiện</div>
+              <div class="author-name">Trần Nguyễn Quang Huy</div>
+              <div class="author-mssv">MSSV: <span style="color: var(--color-gold); font-weight: 600;">SE171192</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Usage Section -->
+        <div class="ai-usage-section">
+          <h2 style="font-family: var(--font-serif); font-size: 22px; color: var(--color-cream); margin-top: 0; margin-bottom: 16px; border-bottom: 1px solid rgba(201, 168, 76, 0.2); padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span>✨</span> HOẠT ĐỘNG ĐÓNG GÓP AI (AI USAGE &amp; CONTRIBUTIONS)
+          </h2>
+          <p style="font-size: 13.5px; color: rgba(240, 230, 211, 0.75); line-height: 1.6; margin-bottom: 20px;">
+            Trải nghiệm triển lãm thực tế ảo này được kiến tạo xuất sắc với sự đồng hành và hỗ trợ đắc lực từ các Trí tuệ Nhân tạo (AI) hàng đầu:
+          </p>
+
+          <div class="ai-cards-container">
+            <!-- Gemini AI -->
+            <div class="ai-card">
+              <div class="ai-card-left">
+                <span class="ai-badge gemini-badge">Gemini AI</span>
+                <span class="ai-role-label">Business Analyst</span>
+              </div>
+              <div class="ai-card-right">
+                <p>
+                  Đóng vai trò <strong>BA (Business Analyst)</strong>: Đảm nhiệm chính trong việc <strong>Brainstorming ý tưởng</strong>, nghiên cứu chuyên sâu, tìm kiếm <strong>thông tin lịch sử chính xác</strong> và thu thập hệ thống <strong>hình ảnh tư liệu nghệ thuật</strong> cốt lõi cho triển lãm.
+                </p>
+              </div>
+            </div>
+
+            <!-- Claude.ai -->
+            <div class="ai-card">
+              <div class="ai-card-left">
+                <span class="ai-badge claude-badge">Claude.ai</span>
+                <span class="ai-role-label">Lead Dev &amp; Design</span>
+              </div>
+              <div class="ai-card-right">
+                <p>
+                  Đóng vai trò <strong>Dev Lead &amp; Design Lead</strong>: Thiết lập các <strong>kế hoạch triển khai chi tiết</strong>, định hình <strong>thiết kế cụ thể rõ ràng</strong> từ dữ liệu đầu vào của Gemini, chốt giải pháp công nghệ, giao diện UI/UX và phương án mỹ thuật tối ưu.
+                </p>
+              </div>
+            </div>
+
+            <!-- Antigravity IDE AI -->
+            <div class="ai-card">
+              <div class="ai-card-left">
+                <span class="ai-badge antigravity-badge">Antigravity AI</span>
+                <span class="ai-role-label">Core Developer</span>
+              </div>
+              <div class="ai-card-right">
+                <p>
+                  Đóng vai trò <strong>Software Engineer chính</strong>: Đảm nhiệm toàn bộ việc <strong>triển khai xây dựng project</strong>, viết code lập trình 3D tương tác, dựng khung cảnh triển lãm, xử lý sự kiện, âm thanh và hoàn thiện sản phẩm.
+                </p>
+              </div>
             </div>
           </div>
         </div>
